@@ -34,12 +34,7 @@ urlpatterns = [
     path('signup/', SignUpView.as_view()),
     path('login/', obtain_auth_token),
     path('users/', UserListView.as_view()),
-
     path('student/', StudentCreateView.as_view()),
-
-    path(
-        'student/<int:pk>/',
-        StudentRetrieveUpdateDeleteView.as_view()
-    ),
+    path('student/',StudentRetrieveUpdateDeleteView.as_view()),
 
 ]
