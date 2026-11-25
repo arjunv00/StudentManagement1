@@ -1,0 +1,69 @@
+###
+POST http://127.0.0.1:8000/signup/
+Content-Type: application/json
+
+{
+    "username": "arjun",
+    "email": "arjun@email.com",
+    "password": "arjun@123"
+}
+
+###
+POST http://127.0.0.1:8000/login/
+Content-Type: application/json
+
+{
+    "username": "arjun",
+    "password": "arjun@123"
+}
+
+###
+GET http://127.0.0.1:8000/users/
+Accept: application/json
+Authorization: Token 2aedc86287f822eb79baa6834e6e09df9df01ecd
+
+###
+POST http://127.0.0.1:8000/student/
+Content-Type: application/json
+Authorization: Token 2aedc86287f822eb79baa6834e6e09df9df01ecd
+
+{
+    "name": "Parvathy",
+    "age": 22,
+    "email": "Parvathy@email.com",
+    "course": "BCA",
+    "place": "Keezhillam"
+}
+
+###
+GET http://127.0.0.1:8000/student/
+Accept: application/json
+Authorization: Token 2aedc86287f822eb79baa6834e6e09df9df01ecd
+
+###
+GET http://127.0.0.1:8000/student/2/
+Accept: application/json
+Authorization: Token 2aedc86287f822eb79baa6834e6e09df9df01ecd
+
+
+###
+PUT http://127.0.0.1:8000/student/2/
+Content-Type: application/json
+Authorization: Token 2aedc86287f822eb79baa6834e6e09df9df01ecd
+
+{
+    "name": "Parvathy Dileep",
+    "age": 23,
+    "email": "Parvathy@email.com",
+    "course": "BCA",
+    "place": "Ernakulam"
+}
+
+###
+DELETE http://127.0.0.1:8000/student/2/
+Authorization: Token 2aedc86287f822eb79baa6834e6e09df9df01ecd
+
+
+###
+POST http://127.0.0.1:8000/logout/
+Authorization: Token 2aedc86287f822eb79baa6834e6e09df9df01ecd
